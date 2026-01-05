@@ -1,4 +1,5 @@
-Lab 1 - coded basic javascript functions
+Lab 1 - coded basic javascript function.
+
 Clone website - {
                 Lab 2 - created a html structure to clone website
                 Lab 3 - added css to the clone website
