@@ -1,0 +1,12 @@
+#ttext.active {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blue;
+    background-color: tomato;
+}
+#box {
+    width: 150px;
+    height: 80px;
+    background: lightgray;
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LAB-1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="header">Welcome to LAB-1</h1>
+        <p>Check if given number is even or odd.</p>
+        <form >
+            <label for="name" >Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="num">Number:</label>
+            <input type="number" id="num" name="num">
+            <input type="submit" value="Submit" onclick="addNumbers(event)">
+            <p id="result" style="width:fit-content ; height:fit-content; background:pink;"></p>
+        </form>
+    
+    <p id="ttext">Toggle example!</p>
+    <button onclick="toggleStyle()">Toggle</button><br><br>
+
+        <button onclick="evenodd()">Perform Funtion</button><br><br>
+
+        <button id="box" onmouseover="changeColor()" onmouseout="resetColor()">Mouse Here!</button> <br><br>
+
+        <button onclick="askName()">Get Greeting</button>
+<p id="greet"></p>
+        <br><br>
+        <button onclick="printPage()">Print Page</button> <br><br>
+
+        <form onsubmit="return validateForm()">
+             <label>Name:</label>
+             <input type="text" id="fname"><br><br>
+
+             <label>Age:</label>
+             <input type="number" id="age"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <blockquote> blockquote</blockquote>
+        Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy
+        <samp> samp</samp>
+        <code>printf("Hello World");</code>
+
+<p id="formResult"></p>
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
