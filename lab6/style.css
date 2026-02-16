@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  background-color: #f9f9f9;
+}
+
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Watermark */
+body::before {
+  content: "AFSHEEN SIMRAH";
+  position: fixed;
+  top: 40%;
+  left: 10%;
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.05);
+  transform: rotate(-30deg);
+  z-index: -1;
+}
