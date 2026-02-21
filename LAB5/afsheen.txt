@@ -1,0 +1,2 @@
+Hello PHP
+This is the appended line.Locked write successful

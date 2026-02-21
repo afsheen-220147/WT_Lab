@@ -12,7 +12,6 @@ if (!isset($_GET['code'])) {
 
 $code = $_GET['code'];
 
-/* Exchange authorization code for access token */
 $token_url = "https://oauth2.googleapis.com/token";
 
 $post_data = [
@@ -36,13 +35,10 @@ $response = file_get_contents($token_url, false, $context);
 $token_data = json_decode($response, true);
 
 if (!isset($token_data['access_token'])) {
-    echo "<pre>";
     print_r($token_data);
-    echo "</pre>";
     exit;
 }
 
-/* Fetch user information */
 $user_info = json_decode(
     file_get_contents(
         "https://www.googleapis.com/oauth2/v2/userinfo?access_token=" . $token_data['access_token']
@@ -50,10 +46,8 @@ $user_info = json_decode(
     true
 );
 
-/* Store user info in session */
 $_SESSION['email'] = $user_info['email'];
 $_SESSION['name']  = $user_info['name'];
 
-/* Redirect back to main page */
 header("Location: index.php");
 exit;

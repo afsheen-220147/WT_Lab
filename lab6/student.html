@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Support</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+
+<div class="logo">Afs220147</div>
+
+<h2>Student Support Portal</h2>
+
+<button class="btn" onclick="studentLogin()">Login with Firebase</button>
+
+<p id="studentInfo"></p>
+
+<p>
+  <a href="index.php">Back to Customer Support</a>
+</p>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyA_pvtwqKHhUcU8djFA22GslnT1oNkYUrU",
+    authDomain: "studentsupportauth-bac31.firebaseapp.com",
+    projectId: "studentsupportauth-bac31",
+    storageBucket: "studentsupportauth-bac31.firebasestorage.app",
+    messagingSenderId: "131158284597",
+    appId: "1:131158284597:web:dbe388ad5ab8380f7d147c"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+  const auth = firebase.auth();
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  function studentLogin() {
+    auth.signInWithPopup(provider)
+      .then((result) => {
+        const user = result.user;
+        document.getElementById("studentInfo").innerHTML =
+          "<strong>Student Logged In</strong><br>" +
+          "Name: " + user.displayName + "<br>" +
+          "Email: " + user.email;
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  }
+</script>
+
+</body>
+</html>
