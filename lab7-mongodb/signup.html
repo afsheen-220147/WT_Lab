@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup</title>
+</head>
+<body>
+  <h2>Create an Account</h2>
+  <form action="/signup" method="POST">
+    <input name="name" type="text" placeholder="Name" required><br><br>
+    <input name="email" type="email" placeholder="Email" required><br><br>
+    <input name="password" type="password" placeholder="Password (Min 6 chars)" minlength="6" required><br><br>
+    <button type="submit">Signup</button>
+  </form>
+  <p>Already have an account? <a href="/login.html">Login here</a></p>
+</body>
+</html>
