@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>Event Handling</h2>
+    <button id="clickBtn">Click Me</button>
+    <div id="hoverBox" class="box">Hover over me</div>
+    
+    <form id="testForm">
+        <input type="text" id="focusInput" placeholder="Focus on me">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            // Mouse Events
+            $("#clickBtn").dblclick(function(){ alert("Double Clicked!"); });
+
+            $("#hoverBox").hover(
+                function(){ $(this).css("background", "green"); },
+                function(){ $(this).css("background", "coral"); }
+            );
+
+            // Form Events
+            $("#focusInput").focus(function(){ $(this).css("background", "yellow"); });
+            $("#focusInput").blur(function(){ $(this).css("background", "white"); });
+
+            $("#testForm").submit(function(e){
+                e.preventDefault();
+                alert("Form submission prevented!");
+            });
+        });
+    </script>
+</body>
+</html>

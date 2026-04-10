@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traversing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>DOM Traversing</h2>
+    <div class="ancestor">
+        <div id="parentDiv" style="padding:10px; border:1px solid gray;">
+            Parent
+            <p id="childP">Child Paragraph</p>
+            <span>Sibling Span</span>
+        </div>
+    </div>
+    <button id="btnTrav">Highlight Parent & Siblings</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#btnTrav").click(function(){
+                // parent() and siblings()
+                $("#childP").parent().css("background", "lightgrey");
+                $("#childP").siblings().css("color", "red");
+            });
+        });
+    </script>
+</body>
+</html>

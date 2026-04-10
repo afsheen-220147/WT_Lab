@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attributes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>Attribute Methods</h2>
+    <img id="myImg" src="https://via.placeholder.com/150" width="100"><br>
+    <button id="btnImg">Change Image</button>
+
+    <hr>
+    <input type="checkbox" id="myCheck"> Disable me?
+    <input type="text" id="myInput" value="Hello World">
+    <button id="btnVal">Get Value</button>
+
+    <script>
+        $(document).ready(function(){
+            // attr() - Change image source
+            $("#btnImg").click(function(){
+                $("#myImg").attr("src", "https://via.placeholder.com/150/0000FF");
+            });
+
+            // prop() - Toggle checkbox
+            $("#myCheck").change(function(){
+                $(this).prop("disabled", true);
+                alert("Checkbox disabled!");
+            });
+
+            // val() - Retrieve input
+            $("#btnVal").click(function(){
+                alert($("#myInput").val());
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Selectors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>Selectors Demo</h2>
+    <div id="main-div" class="container">
+        <p>Paragraph 1 (First)</p>
+        <p class="test">Paragraph 2 (Class: test)</p>
+        <p>Paragraph 3</p>
+        <ul>
+            <li>List Item 0</li>
+            <li>List Item 1</li>
+        </ul>
+        <input type="text" placeholder="I have an attribute">
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // Basic Selectors
+            $("p").css("border", "1px solid black");
+            $(".test").css("color", "red");
+            
+            // Filter Selectors
+            $("li:first").css("font-weight", "bold");
+            $("p:even").css("background", "#eee");
+
+            // Attribute Selector
+            $("[placeholder]").css("background", "lightblue");
+        });
+    </script>
+</body>
+</html>

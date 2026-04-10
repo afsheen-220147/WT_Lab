@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Effects</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>jQuery Effects & Animation</h2>
+    <button id="btnFade">Fade Toggle</button>
+    <button id="btnSlide">Slide Toggle</button>
+    <button id="btnAnim">Animate Move</button>
+    <button id="btnStop">Stop</button>
+
+    <div id="effBox" class="box">Effect Box</div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btnFade").click(function(){ $("#effBox").fadeToggle(); });
+            
+            $("#btnSlide").click(function(){ $("#effBox").slideToggle(); });
+
+            $("#btnAnim").click(function(){
+                $("#effBox").animate({left: '250px', opacity: '0.5'}, 2000)
+                           .animate({height: '200px'}, 1000);
+            });
+
+            $("#btnStop").click(function(){
+                $("#effBox").stop(true); // stop animation control
+            });
+        });
+    </script>
+</body>
+</html>
